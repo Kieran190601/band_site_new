@@ -134,3 +134,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # band_site/settings.py
 LOGOUT_REDIRECT_URL = '/'
 LOGIN_REDIRECT_URL = '/'
+
+# docs/conf.py
+
+# Correct path to Django settings
+os.environ['DJANGO_SETTINGS_MODULE'] = 'band_site.settings'
