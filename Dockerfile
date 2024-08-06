@@ -15,3 +15,5 @@ RUN pip install -r requirements.txt
 
 # Copy the entire project into the container
 COPY . /code/
+
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
