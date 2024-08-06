@@ -1,34 +1,28 @@
-# docs/conf.py
-
 import os
 import sys
-import django
+sys.path.insert(0, os.path.abspath('../..'))
 
-# Add the project root directory to sys.path (directory containing manage.py)
-sys.path.insert(0, os.path.abspath('..'))  # Points to your project root
-
-# Set the Django settings module
-os.environ['DJANGO_SETTINGS_MODULE'] = 'band_site'
-
-# Initialize Django
-django.setup()
-
-# -- Project information -----------------------------------------------------
-project = 'Band Site'
+# Project information
+project = 'Your Project Name'
 author = 'Your Name'
-release = '1.0'
+release = '0.1'
 
-# -- General configuration ---------------------------------------------------
+# Add any Sphinx extension module names here, as strings.
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.napoleon',
     'sphinx.ext.viewcode',
 ]
 
-# -- Options for HTML output -------------------------------------------------
+# Add any paths that contain templates here, relative to this directory.
+templates_path = ['_templates']
+
+# List of patterns, relative to source directory, that match files and directories to ignore.
+exclude_patterns = []
+
+# The theme to use for HTML and HTML Help pages.
 html_theme = 'alabaster'
+
+# Paths for static files, such as CSS.
 html_static_path = ['_static']
 
-# Debugging: Verify paths
-print("Python Path:", sys.path)
-print("Current Working Directory:", os.getcwd())
